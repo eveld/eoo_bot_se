@@ -28,11 +28,11 @@ public class Marriage {
 		String response;
 		Set<String> candidates = marriages.get(channel); 
 		if(candidates.isEmpty()) {
-			response = String.format("PRIVMSG %1$s :Congratulations %2$s, you are first in line!\r\n", channel, nick);
+			response = String.format("PRIVMSG %s :Congratulations %s, you are first in line!\r\n", channel, nick);
 		}
 		else {
 			String verb = (candidates.size() > 1) ? "are" : "is";
-			response = String.format("PRIVMSG %1$s :Get in line %2$s! %3$s %4$s already in line.\r\n", channel, nick, StringUtils.join(candidates, ", "), verb);
+			response = String.format("PRIVMSG %s :Get in line %s! %s %s already in line.\r\n", channel, nick, StringUtils.join(candidates, ", "), verb);
 		}
 		candidates.add(nick);
 		return response;

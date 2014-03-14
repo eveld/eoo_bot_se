@@ -101,6 +101,7 @@ public class DispatchHandler extends ChannelHandlerAdapter {
 				
 				Matcher marryme = Pattern.compile("!marryme").matcher(message);
 				if(marryme.find()) {
+					System.out.println("Sending proposal message!");
 					context.write(Marriage.marryMe(channel, nick));
 					context.flush();
 				}
