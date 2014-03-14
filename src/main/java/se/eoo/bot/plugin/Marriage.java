@@ -1,4 +1,4 @@
-package se.eoo.bot.handler;
+package se.eoo.bot.plugin;
 
 import java.util.HashMap;
 import java.util.LinkedHashSet;
