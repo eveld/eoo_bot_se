@@ -97,7 +97,6 @@ public class DispatchHandler extends ChannelHandlerAdapter {
 				String ip = privmsg.group(2);
 				String channel = privmsg.group(3);
 				String message = privmsg.group(4);
-				System.out.println(nick +"@" + channel + ": " + message);
 				
 				Matcher marryme = Pattern.compile("!marryme").matcher(message);
 				if(marryme.find()) {

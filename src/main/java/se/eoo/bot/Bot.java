@@ -44,7 +44,6 @@ public class Bot implements Daemon {
 			client.handler(new ChannelInitializer<SocketChannel>() {
 				@Override
 				public void initChannel(SocketChannel channel) throws Exception {
-					channel.pipeline().addLast(new DelimiterBasedFrameDecoder(8192, Delimiters.lineDelimiter()));
 					channel.pipeline().addLast(new StringEncoder());
 					channel.pipeline().addLast(new StringDecoder());
 					channel.pipeline().addLast(new DispatchHandler());
@@ -100,7 +99,6 @@ public class Bot implements Daemon {
 					client.handler(new ChannelInitializer<SocketChannel>() {
 						@Override
 						public void initChannel(SocketChannel channel) throws Exception {
-							channel.pipeline().addLast(new DelimiterBasedFrameDecoder(8192, Delimiters.lineDelimiter()));
 							channel.pipeline().addLast(new StringEncoder());
 							channel.pipeline().addLast(new StringDecoder());
 							channel.pipeline().addLast(new DispatchHandler());
